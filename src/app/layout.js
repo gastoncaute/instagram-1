@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import './globals.css'
+import MenuDeNavegacion from '@/components/MenuDeNavegacion'
 
 export const metadata = {
   title: 'Instagram',
@@ -10,25 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body>
-        <h1>Instagram</h1>
-
-        <nav>
-          <ul>
-            <li>
-              <Link className='text-cyan-700' href="/">Inicio</Link>
-            </li>
-            <li>
-              <Link className='text-cyan-700' href="/contacto">Contacto</Link>
-            </li>
-            <li>
-              <Link className='text-cyan-700' href="/productos">Productos</Link>
-            </li>
-          </ul>
-        </nav>
+        {/* <MenuDeNavegacion /> */}
 
         {children}
 
-        <footer>Soy el footer de la pagina</footer>
       </body>
     </html>
   )
