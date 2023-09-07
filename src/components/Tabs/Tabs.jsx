@@ -9,15 +9,30 @@ export default function Tabs() {
 
   return (
     <section>
-      <ul>
-        <button onClick={() => setComponenteVisible("remeras")}>Remeras</button>
-        <button onClick={() => setComponenteVisible("pantalones")}>
-          Pantalones
-        </button>
-        <button onClick={() => setComponenteVisible("lenceria")}>
-          Lenceria
-        </button>
-      </ul>
+      <div class="hidden sm:block">
+        <nav class="flex gap-6" aria-label="Tabs">
+          <button
+            onClick={() => setComponenteVisible("remeras")}
+            class="shrink-0 rounded-lg p-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+          >
+            Remeras
+          </button>
+
+          <button
+            onClick={() => setComponenteVisible("pantalones")}
+            class="shrink-0 rounded-lg p-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+          >
+            Pantalones
+          </button>
+
+          <button
+            onClick={() => setComponenteVisible("lenceria")}
+            class="shrink-0 rounded-lg p-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+          >
+            Lenceria
+          </button>
+        </nav>
+      </div>
 
       {componenteVisible === "remeras" && <RemerasTab />}
       {componenteVisible === "pantalones" && <PantalonesTab />}
